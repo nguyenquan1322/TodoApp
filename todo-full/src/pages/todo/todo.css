@@ -1,0 +1,99 @@
+.todo-app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+  width: 1600px;
+  margin: 120px auto 100px auto;
+  padding: 0 25px;
+}
+.todo-category-item {
+  border: 1px solid rgb(233, 232, 232);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+.todo-category-item .form-save {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  top: 50px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  translate: 0 100%;
+  transition: all 0.5s;
+}
+
+.todo-category-item .form-save.show {
+  translate: 0;
+}
+
+.todo-category-item .list-todo-container {
+  padding: 20px 20px 50px 20px;
+  overflow: auto;
+  scrollbar-width: thin;
+  height: 100%;
+  overscroll-behavior: contain;
+}
+
+.todo-category-item .list-todo-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.todo-category-item .list-todo-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.todo-category-item .list-todo-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.todo-category-item .list-todo-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.todo-category-item .add-button {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  translate: -50% 20%;
+}
+.todo-item {
+  border: 1px solid rgb(231, 230, 230);
+  padding: 15px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: relative;
+  overflow: hidden;
+}
+.todo-item :hover {
+  cursor: pointer;
+}
+.todo-item .action {
+  position: absolute;
+  right: -80px;
+  top: 12px;
+  transition: all 0.5s;
+}
+.todo-item:hover .action {
+  right: 10px;
+}
+
+.todo-item .title {
+  display: flex;
+  gap: 10px;
+}
+
+.hover:hover {
+  cursor: pointer;
+}
